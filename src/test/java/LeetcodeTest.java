@@ -1,4 +1,5 @@
 import org.Leetcode.*;
+import org.Leetcode.Array.TwoDArray.SprialMatrix56;
 import org.Leetcode.DP.*;
 import org.Leetcode.backtrack.DistinctKimited.CombinationSum40;
 import org.Leetcode.backtrack.GenerateParentheses22;
@@ -8,10 +9,7 @@ import org.Leetcode.backtrack.SubsetNotDistinctLimited.SubsetTwo90;
 import org.Leetcode.backtrack.SubsetOrCombinitionDIstinct.Combinitions77;
 import org.Leetcode.backtrack.SubsetOrCombinitionDIstinct.subset78;
 import org.Leetcode.backtrack.UnlimitedDistinct.CombinitionSum;
-import org.Leetcode.dfs.AllRouteFromSrcToDesc797;
-import org.Leetcode.dfs.AllRouteFromSrcToDesc797Solution2;
-import org.Leetcode.dfs.Island;
-import org.Leetcode.dfs.NumberOfSameDifferences967;
+import org.Leetcode.dfs.*;
 import org.Leetcode.slidewindow.LongestSubstringWORepeat;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -250,7 +248,29 @@ public class LeetcodeTest {
     public void testMaxSubarray(){
         MaxSubarray53 maxSubarray53 = new MaxSubarray53();
         int res = maxSubarray53.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4});
+        Assertions.assertEquals(new int[]{1,2,3,4},res);
+    }
+
+    @Test
+    public void test(){
+        MaxSubarray53 maxSubarray53 = new MaxSubarray53();
+        int res = maxSubarray53.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4});
         Assertions.assertEquals(6,res);
+    }
+
+    @Test
+    public void RestoreArray1743(){
+        RestoreArray1743 restoreArray1743 = new RestoreArray1743();
+        int[] res = restoreArray1743.restoreArray(new int[][]{{2,1},{3,4},{3,2}});
+        Assertions.assertArrayEquals( new int[]{1,2,3,4},res);
+    }
+
+    @Test
+    public void Sprial56(){
+        SprialMatrix56 sprialMatrix56 = new SprialMatrix56();
+        var res = sprialMatrix56.spiralOrder(new int[][]{{1,2,3},{4,5,6},{7,8,9}});
+        var res2 = sprialMatrix56.spiralOrder1(new int[][]{{1,2,3},{4,5,6},{7,8,9}});
+        Assertions.assertEquals( 1,1);
     }
 
 }

@@ -1,6 +1,7 @@
-package org.Leetcode;
+package org.Leetcode.Design;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class LRUCache {
 
@@ -104,8 +105,14 @@ public class LRUCache {
             return this.size;
         }
 
-
+//        public LRULinkedHashMap(int capacity){
+//            var dic = new LinkedHashMap<>(5,0.75f,true){
+//
+//            }
+//        }
 
     }
+
+
 }
 

@@ -30,4 +30,20 @@ public class Combinitions77 {
             track.removeLast();
         }
     }
+
+
+    public List<List<Integer>> combineP(int n, int k){
+        LinkedList<Integer> track = new LinkedList<>();
+        backtrack(n,k,0,track);
+        return res;
+    }
+
+    void backtrack1(int n,int k, int start, LinkedList<Integer> track){
+        if(track.size() == k) res.add(new LinkedList<>(track));
+        for(int i = start; i < n; i++){
+            track.addLast(i);
+            backtrack1(n,k,i+1,track);
+            track.removeLast();
+        }
+    }
 }

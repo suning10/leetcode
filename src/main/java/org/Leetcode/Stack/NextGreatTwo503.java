@@ -28,7 +28,6 @@ public class NextGreatTwo503 {
             while(!stack.isEmpty() && nums[i%n] >= stack.peek() ) stack.pop();
             res[i % n] = stack.isEmpty()?-1:stack.peek();// refresh the value when enter the first half
             stack.push(nums[i%n]);
-
         }
 
         return res;
