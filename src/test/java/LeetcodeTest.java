@@ -1,5 +1,8 @@
 import org.Leetcode.*;
+import org.Leetcode.Array.NadjacentElementWSameColor2672;
+import org.Leetcode.Array.TwoDArray.RotateBox1861;
 import org.Leetcode.Array.TwoDArray.SprialMatrix56;
+import org.Leetcode.Array.reverseString;
 import org.Leetcode.DP.*;
 import org.Leetcode.backtrack.DistinctKimited.CombinationSum40;
 import org.Leetcode.backtrack.GenerateParentheses22;
@@ -11,6 +14,7 @@ import org.Leetcode.backtrack.SubsetOrCombinitionDIstinct.subset78;
 import org.Leetcode.backtrack.UnlimitedDistinct.CombinitionSum;
 import org.Leetcode.dfs.*;
 import org.Leetcode.slidewindow.LongestSubstringWORepeat;
+import org.Leetcode.slidewindow.subArrayProductLessThanK713;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -271,6 +275,39 @@ public class LeetcodeTest {
         var res = sprialMatrix56.spiralOrder(new int[][]{{1,2,3},{4,5,6},{7,8,9}});
         var res2 = sprialMatrix56.spiralOrder1(new int[][]{{1,2,3},{4,5,6},{7,8,9}});
         Assertions.assertEquals( 1,1);
+    }
+
+    @Test
+    public void subArray713(){
+        subArrayProductLessThanK713 subArrayProductLessThanK713 = new subArrayProductLessThanK713();
+        int res = subArrayProductLessThanK713.numSubarrayProductLessThanK(new int[]{10,9,10,4,3,8,3,3,6,2,10,10,9,3},18);
+        Assertions.assertEquals(30,res);
+    }
+
+    @Test
+    public void testReverse(){
+        reverseString r = new reverseString();
+        var res = r.reverse("aapplea");
+        Assertions.assertEquals("aia", res);
+    }
+
+    @Test
+    public void testColor(){
+        NadjacentElementWSameColor2672 n = new NadjacentElementWSameColor2672();
+        var res = n.colorTheArray(4, new int[][]{{0,2},{1,2},{3,1},{1,1},{2,1}});
+        Assertions.assertEquals(4, res);
+    }
+
+    @Test
+    public void testRotateBox(){
+        RotateBox1861 rotateBox1861 = new RotateBox1861();
+        var original = new char[][]{{'1','2','3','4'},{'5','6','7','8'}};
+        var test = new char[][]{{'1','2','3','4'},{'5','6','7','8'}};
+        var test1 = new char[][]{{'1','2','3','4'},{'5','6','7','8'}};
+        char[][] transpose = rotateBox1861.transpose(test);
+        rotateBox1861.reverse(test1);
+        var res = rotateBox1861.rotateTheBox(test);
+        Assertions.assertEquals(1,1);
     }
 
 }

@@ -50,7 +50,6 @@ public class RestoreArray1743 {
     public int[] restoreArray(int[][] adjacentPairs) {
 
         var graph = buildGraph(adjacentPairs);
-        visited = new HashSet<>();
         //vertex with one neighbor must be start or end
         int start = -1;
         for(int i: graph.keySet()){
@@ -62,17 +61,21 @@ public class RestoreArray1743 {
         res = new int[graph.size()];
         res[0] = start;
         res[1] = graph.get(start).get(0); // only has one neighbor for start or end
-        int prev = res[1];
+        int prev = res[0];
         for(int i = 2; i < graph.size(); i++){
             //the one not equal to previous one is the next num
             //eg [1,2], [2,3], in graph, 2 -> [1,3]
             //prev = 1, take 3
 
             //get current neighbor
+            List<Integer> curr = graph.get(res[i-1]);
             //find 1's neighbor
-            for(int nei: graph.get(i - 1)){
-                if(nei != prev) res[i] = nei; // find the one not equal to prev
-                break;
+            for(int nei: curr){
+                if(nei != prev) {
+                    res[i] = nei; // find the one not equal to prev
+                    break;
+                }
+
             }
             prev = res[i-1];
         }
