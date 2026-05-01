@@ -7,7 +7,7 @@ public class RotateBox1861 {
 
         var res = transpose(boxGrid);
         reverse(res);
-
+        return null;
     }
 
     public char[][] transpose(char[][] boxGrid){
