@@ -40,6 +40,8 @@ public class MergeInterval56 {
                 return o1[0] - o2[0];
             }
         });
+
+        //Arrays.sort(intervals, (a,b) -> a[0]-b[0]);
         List<int[]> res = new ArrayList<>();
         res.add(intervals[0]);
         for(int[] interval: intervals){
