@@ -4,6 +4,7 @@ import org.Leetcode.Array.TwoDArray.RotateBox1861;
 import org.Leetcode.Array.TwoDArray.SprialMatrix56;
 import org.Leetcode.Array.reverseString;
 import org.Leetcode.DP.*;
+import org.Leetcode.LinkedList.removeDupFromList82;
 import org.Leetcode.backtrack.DistinctKimited.CombinationSum40;
 import org.Leetcode.backtrack.GenerateParentheses22;
 import org.Leetcode.backtrack.PermutationDistinctLimited.Permutation46;
@@ -307,6 +308,14 @@ public class LeetcodeTest {
         char[][] transpose = rotateBox1861.transpose(test);
         rotateBox1861.reverse(test1);
         var res = rotateBox1861.rotateTheBox(test);
+        Assertions.assertEquals(1,1);
+    }
+
+    @Test
+    public void testDelDup(){
+        removeDupFromList82 removeDupFromList = new removeDupFromList82();
+
+        //var res = removeDupFromList.deleteDuplicates(new int[]{1,2,3,3,4,4,5});
         Assertions.assertEquals(1,1);
     }
 
